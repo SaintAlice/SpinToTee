@@ -44,11 +44,16 @@ document.getElementById("winnerTee");
 const nextButton =
 document.getElementById("nextButton");
 
+const playersBar =
+document.getElementById("playersBar");
+
 init();
 
 function init(){
 
-    createResults();
+   createResults();
+
+    drawPlayers();
 
     createWheel();
 
@@ -56,6 +61,43 @@ function init(){
 
     showCurrentPlayer();
 
+updatePlayerBar();
+
+function drawPlayers(){
+
+    playersBar.innerHTML = "";
+
+    results.forEach(function(result,index){
+
+        const initial =
+        result.player
+            .trim()
+            .charAt(0)
+            .toUpperCase();
+
+        playersBar.innerHTML += `
+            <div class="playerCard">
+
+                <div
+                    class="playerPhoto"
+                    id="player-${index}">
+
+                    ${initial}
+
+                </div>
+
+                <div class="playerName">
+
+                    ${result.player}
+
+                </div>
+
+            </div>
+        `;
+
+    });
+
+}
     spinButton.addEventListener(
         "click",
         spinWheel
@@ -259,6 +301,8 @@ function spinWheel(){
 
 function showOverlay(){
 
+    updatePlayerColor();
+
     winnerPlayer.innerHTML =
     "🎉 " +
     results[currentPlayerIndex].player;
@@ -289,6 +333,99 @@ function nextPlayer(){
 
     showCurrentPlayer();
 
+    updatePlayerBar();
+
     spinButton.disabled = false;
+
+}
+
+function drawPlayers(){
+
+    playersBar.innerHTML = "";
+
+    results.forEach(function(result,index){
+
+        const initial =
+        result.player
+            .trim()
+            .charAt(0)
+            .toUpperCase();
+
+        playersBar.innerHTML += `
+
+        <div class="playerCard">
+
+            <div
+                class="playerPhoto"
+                id="player-${index}">
+
+                ${initial}
+
+            </div>
+
+            <div class="playerName">
+
+                ${result.player}
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+function updatePlayerBar(){
+
+    document
+    .querySelectorAll(".playerPhoto")
+    .forEach(function(photo){
+
+        photo.classList.remove("active");
+
+    });
+
+    const current =
+    document.getElementById(
+        "player-" + currentPlayerIndex
+    );
+
+    if(current){
+
+        current.classList.add("active");
+
+    }
+
+}
+
+function updatePlayerColor(){
+
+    const player =
+    document.getElementById(
+        "player-" + currentPlayerIndex
+    );
+
+    if(!player){
+
+        return;
+
+    }
+
+    player.classList.remove(
+        "photo-wit",
+        "photo-geel",
+        "photo-blauw",
+        "photo-rood",
+        "photo-oranje"
+    );
+
+    const tee =
+    results[currentPlayerIndex].tee.toLowerCase();
+
+    player.classList.add(
+        "photo-" + tee
+    );
 
 }
