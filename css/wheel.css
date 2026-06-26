@@ -1,0 +1,110 @@
+#wrapper{
+    position:relative;
+    width:95vw;
+    max-width:800px;
+    margin:auto;
+}
+
+#pointer{
+    font-size:50px;
+    margin-bottom:-25px;
+    z-index:100;
+    position:relative;
+}
+
+#wheelContainer{
+
+    width:min(95vw,95vh);
+    height:min(95vw,95vh);
+
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+#wheel{
+
+    width:100%;
+    height:100%;
+
+    transition:transform 5s cubic-bezier(.17,.67,.24,1);
+
+}
+
+#currentPlayer{
+
+    font-size:32px;
+    font-weight:bold;
+
+    margin:20px 0;
+
+}
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.8);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+
+}
+
+#overlayCard{
+
+    background:white;
+
+    color:black;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    min-width:320px;
+
+    text-align:center;
+
+}
+
+#winnerPlayer{
+
+    margin-bottom:15px;
+
+}
+
+#winnerTee{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+#wheelWrapper{
+
+    position:relative;
+
+    width:320px;
+    height:320px;
+
+    margin:40px auto;
+
+}
+
+#spinButton{
+
+    width:100%;
+
+    margin-top:40px;
+
+}

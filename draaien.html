@@ -3,131 +3,13 @@
 
 <head>
 
+ <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/wheel.css">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Draaien - Spin to Tee</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    background:#1f5f2e;
-    color:white;
-    font-family:Arial,sans-serif;
-
-}
-
-.container{
-
-    width:90%;
-    max-width:600px;
-
-    margin:60px auto;
-
-    text-align:center;
-
-}
-
-h1{
-
-    margin-bottom:40px;
-
-}
-
-#currentPlayer{
-
-    font-size:36px;
-    font-weight:bold;
-
-}
-
-#wheelWrapper{
-
-    margin:40px auto;
-
-    position:relative;
-
-    width:320px;
-    height:320px;
-
-}
-
-#pointer{
-
-    font-size:40px;
-
-    position:absolute;
-
-    top:-35px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    z-index:10;
-
-}
-
-#wheel{
-
-    width:320px;
-    height:320px;
-
-    transition:transform 5s cubic-bezier(.17,.67,.25,1);
-
-}
-
-#spinButton{
-
-    margin-top:40px;
-
-    width:100%;
-
-}
-
-#overlay{
-
-    position:fixed;
-    inset:0;
-
-    background:rgba(0,0,0,.8);
-
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-}
-
-#overlayCard{
-
-    background:white;
-    color:black;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    min-width:300px;
-
-    text-align:center;
-
-}
-
-#winnerTee{
-
-    margin:20px 0;
-
-}
-
-</style>
 
 </head>
 

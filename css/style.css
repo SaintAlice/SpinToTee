@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#1f5f2e;
+    color:white;
+
+    font-family:Arial,sans-serif;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:600px;
+
+    margin:60px auto;
+    text-align:center;
+
+}
+
+
+.card{
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    margin-bottom:20px;
+
+}
+
+p{
+
+    font-size:22px;
+
+    opacity:.85;
+
+    margin-bottom:40px;
+
+}
+
+button{
+
+    padding:15px 30px;
+
+    font-size:20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    transform:scale(1.03);
+
+}
+
+button:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+}
+
+#playerList,
+#results{
+
+    margin-top:30px;
+
+}
+
+.player,
+.result{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:10px;
+
+}
+
+#nextButton,
+#newGameButton{
+
+    width:100%;
+
+    margin-top:40px;
+
+}
