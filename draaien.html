@@ -3,13 +3,13 @@
 
 <head>
 
- <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/wheel.css">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Draaien - Spin to Tee</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/wheel.css">
 
 </head>
 
@@ -21,29 +21,21 @@
 
     <div id="wheelWrapper">
 
-        <div id="pointer">
-            ▼
-        </div>
+        <div id="pointer"></div>
 
         <svg
-    id="wheel"
-    width="320"
-    height="320"
-    viewBox="0 0 400 400">
+            id="wheel"
+            viewBox="0 0 400 400">
 
-    <g id="segments">
+            <g id="segments"></g>
 
-    </g>
+            <circle
+                cx="200"
+                cy="200"
+                r="25"
+                fill="white"/>
 
-    <circle
-        cx="200"
-        cy="200"
-        r="25"
-        fill="white"/>
-
-    </svg>
-
-        </div>
+        </svg>
 
     </div>
 
@@ -51,21 +43,22 @@
         Draai het rad
     </button>
 
-    <div id="overlay">
+</div>
 
-        <div id="overlayCard">
+<div id="overlay">
 
-            <h2 id="winnerPlayer"></h2>
+    <div id="overlayCard">
 
-            <h1 id="winnerTee"></h1>
+        <h2 id="winnerPlayer"></h2>
 
-            <button id="nextButton">
-                Volgende speler
-            </button>
+        <h1 id="winnerTee"></h1>
 
-        </div>
+        <button id="nextButton">
+            Volgende speler
+        </button>
 
     </div>
+
 </div>
 
 <script src="js/draaien.js"></script>
