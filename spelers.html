@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spelers - Spin to Tee</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#1f5f2e;
+    color:white;
+    font-family:Arial,sans-serif;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:600px;
+
+    margin:60px auto;
+
+}
+
+h1{
+
+    margin-bottom:30px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:20px;
+
+    border:none;
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+}
+
+button{
+
+    padding:15px 30px;
+
+    font-size:18px;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+#playerList{
+
+    margin-top:40px;
+
+}
+
+.player{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:10px;
+
+}
+
+#nextButton{
+
+    margin-top:40px;
+
+    width:100%;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Spelers</h1>
+
+<input
+id="playerInput"
+type="text"
+placeholder="Naam speler">
+
+<button id="addPlayerButton">
+
+Speler toevoegen
+
+</button>
+
+<div id="playerList">
+
+</div>
+
+<button
+id="nextButton"
+disabled>
+
+Volgende
+
+</button>
+
+</div>
+
+<script src="js/spelers.js"></script>
+
+</body>
+</html>

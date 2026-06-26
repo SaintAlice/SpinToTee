@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spin to Tee</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#1f5f2e;
+    color:white;
+    font-family:Arial,sans-serif;
+
+}
+
+
+.card{
+    text-align:center;
+    max-width:500px;
+    padding:20px;
+}
+
+h1{
+
+    font-size:60px;
+    margin-bottom:10px;
+
+}
+
+p{
+
+    font-size:22px;
+    opacity:.8;
+    margin-bottom:40px;
+
+}
+
+button{
+
+    padding:18px 50px;
+    font-size:22px;
+
+    border:none;
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+button:hover{
+
+    transform:scale(1.03);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Spin to Tee</h1>
+
+<p>Bepaal eerlijk vanaf welke tee iedereen speelt.</p>
+
+<button id="startButton">
+Start spel
+</button>
+
+</div>
+
+<script>
+
+localStorage.removeItem("players");
+localStorage.removeItem("tees");
+localStorage.removeItem("results");
+localStorage.removeItem("currentPlayer");
+
+document
+.getElementById("startButton")
+.addEventListener("click", () => {
+
+    localStorage.removeItem("players");
+    localStorage.removeItem("tees");
+    localStorage.removeItem("results");
+    localStorage.removeItem("currentPlayer");
+
+    location.href = "spelers.html";
+
+});
+
+</script>
+
+</body>
+</html>
