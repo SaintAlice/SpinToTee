@@ -437,3 +437,49 @@ h1{
 
 }
 
+/* =========================================
+   HOME BUTTON
+========================================= */
+
+.homeButton{
+
+    position:fixed;
+
+    top:24px;
+
+    left:24px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:28px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.18);
+
+    transition:.25s;
+
+    z-index:999;
+
+}
+
+.homeButton:hover{
+
+    transform:translateY(-2px);
+
+    background:white;
+
+}

@@ -1,194 +1,25 @@
-#wrapper{
-    position:relative;
-    width:95vw;
-    max-width:800px;
-    margin:auto;
-}
+/* ==========================================
+   DRAAI PAGINA
+========================================== */
 
-#pointer{
+.container{
 
-    position:absolute;
-
-    top:-18px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:0;
-    height:0;
-
-    border-left:16px solid transparent;
-    border-right:16px solid transparent;
-    border-top:26px solid white;
-
-    z-index:100;
-
-}
-
-#wheelContainer{
-
-    width:min(95vw,95vh);
-    height:min(95vw,95vh);
-
-    margin:auto;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-}
-
-#wheel{
-
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    transform-origin:center center;
-
-    transition:transform 5s cubic-bezier(.17,.67,.24,1);
-
-}
-
-#currentPlayer{
-
-    font-size:32px;
-    font-weight:bold;
-
-    margin:20px 0;
-
-}
-
-#overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.8);
-
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:999;
-
-}
-
-#overlayCard{
-
-    background:white;
-
-    color:black;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    min-width:320px;
-
-    text-align:center;
-
-}
-
-#winnerPlayer{
-
-    margin-bottom:15px;
-
-}
-
-#winnerTee{
-
-    font-size:60px;
-
-    margin-bottom:20px;
-
-}
-
-#wheelWrapper{
-
-    position:relative;
-
-    width:320px;
-    height:320px;
+    width:min(92%,900px);
 
     margin:40px auto;
 
-}
-
-#spinButton{
-
-    width:100%;
-
-    margin-top:40px;
-
-}
-
-#playersBar{
-
     display:flex;
 
-    justify-content:center;
+    flex-direction:column;
 
-    gap:18px;
-
-    margin-bottom:30px;
-
-    overflow-x:auto;
-
-    padding:8px;
-
-}
-
-.playerCard{
-
-    min-width:72px;
-
-    text-align:center;
-
-}
-
-.playerPhoto{
-
-    width:62px;
-    height:62px;
-
-    border-radius:50%;
-
-    border:4px solid #cfcfcf;
-
-    background:#ffffff;
-
-    display:flex;
-
-    justify-content:center;
     align-items:center;
 
-    font-size:28px;
-
-    transition:.4s;
-
-    margin:auto;
-
 }
 
-.playerName{
 
-    margin-top:8px;
-
-    font-size:14px;
-
-    color:white;
-
-    white-space:nowrap;
-
-}
-
-/* ==========================
+/* ==========================================
    SPELERSBALK
-========================== */
+========================================== */
 
 #playersBar{
 
@@ -196,13 +27,11 @@
 
     justify-content:center;
 
-    gap:18px;
+    gap:20px;
 
-    margin-bottom:30px;
+    margin-bottom:35px;
 
-    overflow-x:auto;
-
-    padding:10px 0;
+    flex-wrap:wrap;
 
 }
 
@@ -214,85 +43,308 @@
 
     align-items:center;
 
-    min-width:72px;
+    width:72px;
 
 }
 
 .playerPhoto{
 
     width:64px;
+
     height:64px;
 
     border-radius:50%;
 
-    border:4px solid #cfcfcf;
-
     background:white;
+
+    border:3px solid #d7d7d7;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
+
+    color:#215B35;
 
     font-size:24px;
 
     font-weight:700;
 
-    color:#23452d;
-
-    transition:
-        .35s;
-
-    margin:auto;
+    transition:.3s;
 
 }
 
 .playerPhoto.active{
 
-    transform:scale(1.1);
+    transform:scale(1.12);
 
-    box-shadow:0 6px 20px rgba(0,0,0,.3);
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
 
 }
 
 .playerName{
 
-    margin-top:10px;
-
-    font-size:13px;
-
-    font-weight:500;
+    margin-top:8px;
 
     color:white;
 
+    font-size:13px;
+
+    text-align:center;
+
 }
+
+
+/* ==========================================
+   TEE KLEUREN
+========================================== */
 
 .photo-wit{
 
-    border-color:#ffffff;
+    border-color:white;
 
 }
 
 .photo-geel{
 
-    border-color:#ffd700;
+    border-color:#FFD229;
 
 }
 
 .photo-blauw{
 
-    border-color:#2196f3;
+    border-color:#2D8CEB;
 
 }
 
 .photo-rood{
 
-    border-color:#f44336;
+    border-color:#F44336;
 
 }
 
 .photo-oranje{
 
-    border-color:#ff9800;
+    border-color:#FF9800;
+
+}
+
+
+/* ==========================================
+   TITEL
+========================================== */
+
+#currentPlayer{
+
+    color:white;
+
+    font-size:44px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ==========================================
+   RAD
+========================================== */
+
+#wheelWrapper{
+
+    position:relative;
+
+    width:420px;
+
+    height:420px;
+
+    margin-bottom:40px;
+
+}
+
+#wheel{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    transform-origin:center;
+
+    transition:transform 5s cubic-bezier(.17,.67,.24,1);
+
+    filter:
+        drop-shadow(
+            0 18px 30px rgba(0,0,0,.28)
+        );
+
+}
+
+
+/* ==========================================
+   PIJL
+========================================== */
+
+#pointer{
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:0;
+
+    border-left:16px solid transparent;
+
+    border-right:16px solid transparent;
+
+    border-top:26px solid white;
+
+    z-index:5;
+
+}
+
+
+/* ==========================================
+   DRAAIKNOP
+========================================== */
+
+#spinButton{
+
+    width:260px;
+
+    height:68px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.18);
+
+}
+
+#spinButton:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#spinButton:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    z-index:999;
+
+}
+
+#overlayCard{
+
+    width:min(90%,420px);
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35);
+
+}
+
+#winnerPlayer{
+
+    color:#215B35;
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+#winnerTee{
+
+    font-size:56px;
+
+    margin-bottom:30px;
+
+}
+
+#nextButton{
+
+    width:240px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#nextButton:hover{
+
+    transform:translateY(-3px);
 
 }
