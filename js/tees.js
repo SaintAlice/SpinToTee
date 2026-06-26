@@ -1,5 +1,5 @@
 const checkboxes =
-document.querySelectorAll("input[type='checkbox']");
+document.querySelectorAll(".teeCard input");
 
 const startButton =
 document.getElementById("startButton");

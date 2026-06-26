@@ -1,0 +1,419 @@
+/* =========================================
+   TEE PAGINA
+========================================= */
+
+.container{
+
+    width:min(92%,900px);
+
+    margin:50px auto;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:64px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.subtitle{
+
+    font-size:22px;
+
+    color:rgba(255,255,255,.75);
+
+    margin-bottom:45px;
+
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+#teeGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+    max-width:760px;
+
+    margin:50px auto;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.teeCard{
+
+    position:relative;
+
+}
+
+.teeCard input{
+
+    display:none;
+
+}
+
+.teeCard label{
+
+    background:#ffffff;
+
+    height:250px;
+
+    border-radius:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    border:2px solid transparent;
+
+    position:relative;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.teeCard label:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.20);
+
+}
+
+
+/* =========================================
+   TEE CIRCLE
+========================================= */
+
+.teeCircle{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+
+/* =========================================
+   TEE SVG
+========================================= */
+
+.teeSvg{
+
+    width:72px;
+    height:144px;
+
+
+}
+
+.teeSvg path{
+
+    fill:currentColor;
+
+}
+
+
+/* =========================================
+   KLEUREN
+========================================= */
+
+.wit{
+
+    background:#ffffff;
+
+    border:3px solid #D8D8D8;
+
+}
+
+.geel{
+
+    background:#FFD229;
+
+}
+
+.blauw{
+
+    background:#2D8CEB;
+
+}
+
+.rood{
+
+    background:#F44336;
+
+}
+
+.oranje{
+
+    background:#FF9800;
+
+}
+
+.teeSvg.wit{
+    color:#D8D8D8;
+}
+
+.wit{
+
+    background:#FFFFFF;
+
+    border:3px solid #000000;
+}
+
+.teeSvg.geel{
+
+    color:#ffffff;
+
+}
+
+.teeSvg.blauw{
+
+    color:#ffffff;
+
+}
+
+.teeSvg.rood{
+
+    color:#ffffff;
+
+}
+
+.teeSvg.oranje{
+
+    color:#ffffff;
+
+}
+
+.teeSvg{
+
+    width:50px;
+
+    height:100px;
+
+    margin-bottom:22px;
+
+}
+
+
+/* =========================================
+   TITEL
+========================================= */
+
+.teeCard span{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#21422c;
+
+}
+
+
+/* =========================================
+   ONDERLIJN
+========================================= */
+
+.teeLine{
+
+    width:65px;
+
+    height:5px;
+
+    border-radius:999px;
+
+    margin-top:18px;
+
+}
+
+.teeLine.wit{
+
+    background:#D8D8D8;
+
+}
+
+.teeLine.geel{
+
+    background:#FFD229;
+
+}
+
+.teeLine.blauw{
+
+    background:#2D8CEB;
+
+}
+
+.teeLine.rood{
+
+    background:#F44336;
+
+}
+
+.teeLine.oranje{
+
+    background:#FF9800;
+
+}
+
+
+/* =========================================
+   SELECTIE
+========================================= */
+
+.teeCard input:checked + label{
+
+    transform:translateY(-8px);
+
+    border-width:3px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.teeCard input:checked + label::after{
+
+    content:"✓";
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:#1F5F2E;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+#wit:checked + label{
+
+    border-color:#D8D8D8;
+
+}
+
+#geel:checked + label{
+
+    border-color:#FFD229;
+
+}
+
+#blauw:checked + label{
+
+    border-color:#2D8CEB;
+
+}
+
+#rood:checked + label{
+
+    border-color:#F44336;
+
+}
+
+#oranje:checked + label{
+
+    border-color:#FF9800;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+#startButton{
+
+    width:100%;
+
+    padding:22px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    border:none;
+
+    border-radius:20px;
+
+    transition:.25s;
+
+}
+
+#startButton:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+}
+
+#startButton:not(:disabled){
+
+    background:#215B35;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+#startButton:not(:disabled):hover{
+
+    transform:translateY(-3px);
+
+}
+

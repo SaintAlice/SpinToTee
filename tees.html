@@ -3,12 +3,13 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tee's kiezen - Spin to Tee</title>
+    <title>Tee's kiezen - Spin to Tee</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tees.css">
 
 </head>
 
@@ -16,48 +17,137 @@
 
 <div class="container">
 
-<h1>Kies de tee's</h1>
+    <h1>Kies de tee's</h1>
 
-<label class="tee">
-<input type="checkbox" value="Wit">
- Wit
-</label>
+    <p class="subtitle">
+        Selecteer minimaal 2 tee's
+    </p>
 
-<br>
+    <div id="teeGrid">
 
-<label class="tee">
-<input type="checkbox" value="Geel">
-Geel
-</label>
+        <!-- Wit -->
+        <div class="teeCard">
 
-<br>
+            <input
+                type="checkbox"
+                id="wit"
+                value="Wit">
 
-<label class="tee">
-<input type="checkbox" value="Blauw">
-Blauw
-</label>
+            <label for="wit">
 
-<br>
+                <img
+                    src="images/tee-wit.svg"
+                    class="teeSvg"
+                    alt="Wit">
 
-<label class="tee">
-<input type="checkbox" value="Rood">
-Rood
-</label>
+                <span>Wit</span>
 
-<br>
+                <div class="teeLine wit"></div>
 
-<label class="tee">
-<input type="checkbox" value="Oranje">
-Oranje
-</label>
+            </label>
 
-<button
-id="startButton"
-disabled>
+        </div>
 
-Start draaien
+        <!-- Geel -->
+        <div class="teeCard">
 
-</button>
+            <input
+                type="checkbox"
+                id="geel"
+                value="Geel">
+
+            <label for="geel">
+
+            <img
+                src="images/tee-geel.svg"
+                class="teeSvg"
+                alt="Geel">
+
+            <span>Geel</span>
+
+            <div class="teeLine geel"></div>
+
+            </label>
+        </div>
+
+        <!-- Blauw -->
+        <div class="teeCard">
+
+            <input
+                type="checkbox"
+                id="blauw"
+                value="Blauw">
+
+            <label for="blauw">
+
+            <img
+                src="images/tee-blauw.svg"
+                class="teeSvg"
+                alt="Blauw">
+
+            <span>Blauw</span>
+
+            <div class="teeLine blauw"></div>
+
+            </label>
+
+        </div>
+
+        <!-- Rood -->
+        <div class="teeCard">
+
+            <input
+                type="checkbox"
+                id="rood"
+                value="Rood">
+
+            <label for="rood">
+
+            <img
+                src="images/tee-rood.svg"
+                class="teeSvg"
+                alt="Rood">
+
+            <span>Rood</span>
+
+            <div class="teeLine rood"></div>
+
+            </label>
+
+        </div>
+
+        <!-- Oranje -->
+        <div class="teeCard">
+
+            <input
+                type="checkbox"
+                id="oranje"
+                value="Oranje">
+
+            <label for="oranje">
+
+            <img
+                src="images/tee-oranje.svg"
+                class="teeSvg"
+                alt="Oranje">
+
+            <span>Oranje</span>
+
+            <div class="teeLine oranje"></div>
+
+            </label>
+
+        </div>
+
+    </div>
+
+    <button
+        id="startButton"
+        disabled>
+
+        Start draaien
+
+    </button>
 
 </div>
 
