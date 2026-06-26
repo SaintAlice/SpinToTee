@@ -1,36 +1,89 @@
-let players =
-JSON.parse(localStorage.getItem("players")) || [];
+let allPlayers =
+JSON.parse(localStorage.getItem("allPlayers")) || [];
 
-const playerInput = document.getElementById("playerInput");
-const addPlayerButton = document.getElementById("addPlayerButton");
-const playerList = document.getElementById("playerList");
-const nextButton = document.getElementById("nextButton");
+const playerInput =
+document.getElementById("playerInput");
 
-addPlayerButton.addEventListener("click", addPlayer);
+const addPlayerButton =
+document.getElementById("addPlayerButton");
 
-playerInput.addEventListener("keydown", function(event){
+const playerList =
+document.getElementById("playerList");
 
-    if(event.key === "Enter"){
-        addPlayer();
-    }
+const nextButton =
+document.getElementById("nextButton");
 
-});
+init();
 
-nextButton.addEventListener("click", goToTees);
+function init(){
+
+    renderPlayers();
+
+    addPlayerButton.addEventListener(
+        "click",
+        addPlayer
+    );
+
+    playerInput.addEventListener(
+        "keydown",
+        function(event){
+
+            if(event.key === "Enter"){
+
+                addPlayer();
+
+            }
+
+        }
+    );
+
+    nextButton.addEventListener(
+        "click",
+        startGame
+    );
+
+}
 
 function addPlayer(){
 
-    const name = playerInput.value.trim();
+    const name =
+    playerInput.value.trim();
 
     if(name === ""){
+
         return;
+
     }
 
-    players.push(name);
+    const bestaatAl =
+    allPlayers.some(function(player){
+
+        return player.name.toLowerCase() ===
+        name.toLowerCase();
+
+    });
+
+    if(bestaatAl){
+
+        alert("Deze speler bestaat al.");
+
+        return;
+
+    }
+
+    allPlayers.push({
+
+        id: Date.now(),
+
+        name: name,
+
+        photo: ""
+
+    });
 
     localStorage.setItem(
-    "players",
-    JSON.stringify(players)
+        "allPlayers",
+        JSON.stringify(allPlayers)
     );
 
     playerInput.value = "";
@@ -43,43 +96,75 @@ function renderPlayers(){
 
     playerList.innerHTML = "";
 
-    players.forEach(function(player, index){
+    allPlayers.forEach(function(player,index){
+
+        const initial =
+        player.name
+        .charAt(0)
+        .toUpperCase();
 
         playerList.innerHTML += `
-            <div class="player">
 
-                <span>${player}</span>
+        <div class="player">
 
-                <button onclick="removePlayer(${index})">
-                    🗑
-                </button>
+            <div class="playerPhoto">
+
+                ${initial}
 
             </div>
+
+            <span>
+
+                ${player.name}
+
+            </span>
+
+            <button
+                onclick="removePlayer(${index})">
+
+                🗑
+
+            </button>
+
+        </div>
+
         `;
 
     });
 
-    nextButton.disabled = players.length < 2;
+    nextButton.disabled =
+    allPlayers.length < 2;
 
 }
 
 function removePlayer(index){
 
-    players.splice(index, 1);
+    allPlayers.splice(index,1);
 
     localStorage.setItem(
-    "players",
-    JSON.stringify(players)
+        "allPlayers",
+        JSON.stringify(allPlayers)
     );
 
     renderPlayers();
 
 }
 
-renderPlayers();
+function startGame(){
 
-function goToTees(){
+    const players =
+    allPlayers.map(function(player){
 
-    location.href = "tees.html";
+        return player.name;
+
+    });
+
+    localStorage.setItem(
+        "players",
+        JSON.stringify(players)
+    );
+
+    location.href =
+    "tees.html";
 
 }
