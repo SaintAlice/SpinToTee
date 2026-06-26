@@ -1,0 +1,301 @@
+/* =========================================
+   SPELERS PAGINA
+========================================= */
+
+.page{
+
+    width:min(92%,650px);
+
+    margin:60px auto;
+
+}
+
+/* =========================================
+   TITELS
+========================================= */
+
+h1{
+
+    color:white;
+
+    font-size:64px;
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:rgba(255,255,255,.80);
+
+    font-size:22px;
+
+    margin-bottom:40px;
+
+}
+
+/* =========================================
+   SPELER TOEVOEGEN
+========================================= */
+
+.addPlayer{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-bottom:30px;
+
+}
+
+#playerInput{
+
+    flex:1;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:24px;
+
+    padding:0 24px;
+
+    font-size:22px;
+
+    background:rgba(255,255,255,.95);
+
+    outline:none;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.12);
+
+}
+
+#addPlayerButton{
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:22px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:0;
+
+    line-height:1;
+
+    transition:.25s;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.18);
+
+}
+
+#addPlayerButton:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#addPlayerButton:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================================
+   SPELERSLIJST
+========================================= */
+
+#playerList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-bottom:40px;
+
+}
+
+/* =========================================
+   SPELERKAART
+========================================= */
+
+.player{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:rgba(255,255,255,.94);
+
+    border-radius:24px;
+
+    padding:18px 20px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+
+    transition:.25s;
+
+}
+
+.player:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* =========================================
+   LINKERKANT
+========================================= */
+
+.playerInfo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.playerAvatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:#215B35;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.playerName{
+
+    font-size:28px;
+
+    font-weight:600;
+
+    color:#21422c;
+
+}
+
+/* =========================================
+   VERWIJDERKNOP
+========================================= */
+
+.removeButton{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F5F5F5;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.25s;
+
+}
+
+.removeButton:hover{
+
+    background:#E8E8E8;
+
+    transform:scale(1.05);
+
+}
+
+/* =========================================
+   VOLGENDE
+========================================= */
+
+#nextButton{
+
+    display:block;
+
+    width:280px;
+
+    height:70px;
+
+    margin:0 auto;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.18);
+
+}
+
+#nextButton:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#nextButton:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+}

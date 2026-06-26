@@ -10,37 +10,44 @@
 <title>Spelers - Spin to Tee</title>
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/spelers.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
 
-<h1>Spelers</h1>
+    <h1>Spelers</h1>
 
-<input
-id="playerInput"
-type="text"
-placeholder="Naam speler">
+    <p class="subtitle">
+        Wie doen er vandaag mee?
+    </p>
 
-<button id="addPlayerButton">
+    <div class="addPlayer">
 
-Speler toevoegen
+      <input
+        type="text"
+        id="playerInput"
+        placeholder="Naam speler">
 
-</button>
+        <button id="addPlayerButton">
 
-<div id="playerList">
+            +
 
-</div>
+        </button>
 
-<button
-id="nextButton"
-disabled>
+    </div>
 
-Volgende
+    <div id="playerList"></div>
 
-</button>
+    <button
+        id="nextButton"
+        disabled>
+
+        Volgende →
+
+    </button>
 
 </div>
 

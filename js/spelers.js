@@ -96,44 +96,47 @@ function renderPlayers(){
 
     playerList.innerHTML = "";
 
-    allPlayers.forEach(function(player,index){
+    allPlayers.forEach(function(player, index){
 
         const initial =
-        player.name
-        .charAt(0)
-        .toUpperCase();
+            player.name.charAt(0).toUpperCase();
 
         playerList.innerHTML += `
 
-        <div class="player">
+            <div class="player">
 
-            <div class="playerPhoto">
+                <div class="playerInfo">
 
-                ${initial}
+                    <div class="playerAvatar">
+
+                        ${initial}
+
+                    </div>
+
+                    <div class="playerName">
+
+                        ${player.name}
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="removeButton"
+                    onclick="removePlayer(${index})">
+
+                    🗑️
+
+                </button>
 
             </div>
-
-            <span>
-
-                ${player.name}
-
-            </span>
-
-            <button
-                onclick="removePlayer(${index})">
-
-                🗑
-
-            </button>
-
-        </div>
 
         `;
 
     });
 
     nextButton.disabled =
-    allPlayers.length < 2;
+        allPlayers.length < 2;
 
 }
 
