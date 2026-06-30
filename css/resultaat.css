@@ -1,0 +1,186 @@
+.page{
+
+    width:min(92%,700px);
+
+    margin:50px auto;
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:white;
+
+    font-size:64px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:rgba(255,255,255,.8);
+
+    font-size:22px;
+
+    margin-bottom:40px;
+
+}
+
+#results{
+
+    width:min(92%,700px);
+
+    margin:40px auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.resultCard{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:26px;
+
+    padding:24px 28px;
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.10);
+
+}
+
+.resultLeft{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.resultAvatar{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:28x;
+
+    font-weight:700;
+
+}
+
+.resultName{
+
+    font-size:30px;
+
+    font-weight:600;
+
+    color:#21422c;
+
+}
+
+.resultBadge{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.resultBadge.wit{
+
+    background:#bdbdbd;
+
+}
+
+.resultBadge.geel{
+
+    background:#FFD229;
+
+    color:#333;
+
+}
+
+.resultBadge.blauw{
+
+    background:#2D8CEB;
+
+}
+
+.resultBadge.rood{
+
+    background:#F44336;
+
+}
+
+.resultBadge.oranje{
+
+    background:#FF9800;
+
+}
+
+#newGameButton{
+
+    display:block;
+
+    width:260px;
+
+    height:70px;
+
+    margin:50px auto 0;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#newGameButton:hover{
+
+    transform:translateY(-3px);
+
+}

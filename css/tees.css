@@ -106,6 +106,11 @@ h1{
 
 }
 
+.teeCard input:checked + label .teeSvg{
+
+    transform:scale(1.12);
+
+}
 
 /* =========================================
    TEE CIRCLE
@@ -136,8 +141,11 @@ h1{
 
 .teeSvg{
 
-    width:72px;
-    height:144px;
+    width:56px;
+
+    height:112px;
+
+    margin-bottom:8px;
 
 }
 
@@ -146,7 +154,6 @@ h1{
     fill:currentColor;
 
 }
-
 
 /* =========================================
    KLEUREN
@@ -185,14 +192,9 @@ h1{
 }
 
 .teeSvg.wit{
-    color:#D8D8D8;
-}
 
-.wit{
+    color:white;
 
-    background:#FFFFFF;
-
-    border:3px solid #000000;
 }
 
 .teeSvg.geel{
@@ -219,15 +221,6 @@ h1{
 
 }
 
-.teeSvg{
-
-    width:50px;
-
-    height:100px;
-
-    margin-bottom:22px;
-
-}
 
 
 /* =========================================
@@ -376,19 +369,23 @@ h1{
 
 #startButton{
 
-    width:100%;
+    width:260px;
 
-    padding:22px;
+    height:70px;
 
-    font-size:28px;
+    margin:40px auto 0;
+
+    display:block;
+
+    border-radius:999px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:24px;
 
     font-weight:700;
-
-    border:none;
-
-    border-radius:20px;
-
-    transition:.25s;
 
 }
 

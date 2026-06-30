@@ -17,13 +17,40 @@ function showResults(){
 
     results.forEach(function(result){
 
+        const initial =
+        result.player
+            .charAt(0)
+            .toUpperCase();
+
+        const teeClass =
+        result.tee.toLowerCase();
+
         resultsContainer.innerHTML += `
 
-        <div class="result">
+        <div class="resultCard">
 
-            <span>${result.player}</span>
+            <div class="resultLeft">
 
-            <span>${getTeeEmoji(result.tee)} ${result.tee}</span>
+                <div class="resultAvatar ${teeClass}">
+
+                    ${initial}
+
+                </div>
+
+                <div class="resultName">
+
+                    ${result.player}
+
+                </div>
+
+            </div>
+
+            <div class="resultBadge ${teeClass}">
+
+                ${getTeeEmoji(result.tee)}
+                ${result.tee}
+
+            </div>
 
         </div>
 

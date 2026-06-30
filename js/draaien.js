@@ -29,29 +29,17 @@ document.getElementById("wheel");
 const svg =
 document.getElementById("segments");
 
-const spinButton =
-document.getElementById("spinButton");
-
-const overlay =
-document.getElementById("overlay");
-
-const winnerPlayer =
-document.getElementById("winnerPlayer");
-
-const winnerTee =
-document.getElementById("winnerTee");
-
-const nextButton =
-document.getElementById("nextButton");
-
 const playersBar =
 document.getElementById("playersBar");
+
+const statusText =
+document.getElementById("statusText");
 
 init();
 
 function init(){
 
-   createResults();
+    createResults();
 
     drawPlayers();
 
@@ -61,51 +49,11 @@ function init(){
 
     showCurrentPlayer();
 
-updatePlayerBar();
+    updatePlayerBar();
 
-function drawPlayers(){
-
-    playersBar.innerHTML = "";
-
-    results.forEach(function(result,index){
-
-        const initial =
-        result.player
-            .trim()
-            .charAt(0)
-            .toUpperCase();
-
-        playersBar.innerHTML += `
-            <div class="playerCard">
-
-                <div
-                    class="playerPhoto"
-                    id="player-${index}">
-
-                    ${initial}
-
-                </div>
-
-                <div class="playerName">
-
-                    ${result.player}
-
-                </div>
-
-            </div>
-        `;
-
-    });
-
-}
-    spinButton.addEventListener(
+    wheel.addEventListener(
         "click",
         spinWheel
-    );
-
-    nextButton.addEventListener(
-        "click",
-        nextPlayer
     );
 
 }
@@ -249,14 +197,17 @@ function drawWheel(){
 function showCurrentPlayer(){
 
     currentPlayer.innerHTML =
-    results[currentPlayerIndex].player +
-    " draait";
+        results[currentPlayerIndex].player +
+        " draait";
+
+    statusText.innerHTML =
+        "Klik op het rad om te draaien";
 
 }
 
 function spinWheel(){
 
-    spinButton.disabled = true;
+    wheel.style.pointerEvents = "none";
 
     const teeNaam =
     results[currentPlayerIndex].tee;
@@ -286,39 +237,50 @@ function spinWheel(){
     (target - currentAngle + 360) % 360;
 
     currentRotation +=
-    (5 * 360) + extraRotation;
+    (3 * 360) + extraRotation;
 
     wheel.style.transform =
     `rotate(${currentRotation}deg)`;
 
     setTimeout(function(){
 
-        showOverlay();
+        showResult();
 
-    },5000);
-
+    },2400);
 }
 
-function showOverlay(){
+function showResult(){
 
     updatePlayerColor();
 
-    winnerPlayer.innerHTML =
-    "🎉 " +
+    const speler =
     results[currentPlayerIndex].player;
 
-    winnerTee.innerHTML =
+    const tee =
     results[currentPlayerIndex].tee;
 
-    overlay.style.display =
-    "flex";
+    const kleurEmoji = {
+
+        "Wit":"⚪",
+        "Geel":"🟡",
+        "Blauw":"🔵",
+        "Rood":"🔴",
+        "Oranje":"🟠"
+
+    };
+
+    statusText.innerHTML =
+        `${kleurEmoji[tee]} <strong>${speler}</strong> speelt vanaf <strong>${tee}</strong>`;
+
+    setTimeout(function(){
+
+        nextPlayer();
+
+    },1000);
 
 }
 
 function nextPlayer(){
-
-    overlay.style.display =
-    "none";
 
     currentPlayerIndex++;
 
@@ -335,7 +297,10 @@ function nextPlayer(){
 
     updatePlayerBar();
 
-    spinButton.disabled = false;
+    statusText.innerHTML =
+        "Klik op het rad om te draaien";
+
+    wheel.style.pointerEvents = "auto";
 
 }
 

@@ -26,6 +26,12 @@ body{
 
     background-attachment:fixed;
 
+    font-family:
+    Arial,
+    sans-serif;
+
+    color:white;
+
 }
 
 .homeContainer{
@@ -71,9 +77,15 @@ body{
 
 h1{
 
+    color:white;
+
     font-size:60px;
 
-    margin-bottom:20px;
+    font-weight:700;
+
+    margin-bottom:16px;
+
+    text-align:center;
 
 }
 
@@ -95,17 +107,13 @@ p{
 
 button{
 
-    padding:15px 30px;
-
-    font-size:20px;
-
     border:none;
 
-    border-radius:12px;
+    border-radius:999px;
 
-    cursor:pointer;
+    font-weight:700;
 
-    transition:.2s;
+    transition:.25s;
 
 }
 
@@ -177,13 +185,6 @@ input{
    TEE PAGINA
 ========================== */
 
-h1{
-
-    font-size:58px;
-
-    margin-bottom:10px;
-
-}
 
 .subtitle{
 
