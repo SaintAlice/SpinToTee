@@ -196,12 +196,21 @@ function drawWheel(){
 
 function showCurrentPlayer(){
 
-    currentPlayer.innerHTML =
-        results[currentPlayerIndex].player +
+    currentPlayer.textContent =
+        results[currentPlayerIndex].player.charAt(0).toUpperCase() +
+        results[currentPlayerIndex].player.slice(1) +
         " draait";
 
+    if (currentPlayerIndex === 0) {
+
     statusText.innerHTML =
-        "Klik op het rad om te draaien";
+        "Tik op het rad om te draaien";
+
+    } else {
+
+        statusText.innerHTML = "";
+
+    }
 
 }
 
@@ -296,9 +305,6 @@ function nextPlayer(){
     showCurrentPlayer();
 
     updatePlayerBar();
-
-    statusText.innerHTML =
-        "Klik op het rad om te draaien";
 
     wheel.style.pointerEvents = "auto";
 
