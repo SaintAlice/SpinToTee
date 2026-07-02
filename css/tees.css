@@ -1,41 +1,46 @@
-/* =========================================
-   TEE PAGINA
-========================================= */
+/* PAGINA */
 
 .container{
 
-    width:min(92%,900px);
+    width:min(90%,480px);
 
-    margin:50px auto;
+    margin:0 auto;
+
+    padding:90px 20px 40px;
+
+    padding-bottom:calc(env(safe-area-inset-bottom) + 30px);
 
     text-align:center;
 
 }
 
+
+/* TITELS */
+
 h1{
 
-    font-size:64px;
+    font-size:clamp(2.3rem,8vw,3.2rem);
 
     font-weight:700;
 
-    margin-bottom:12px;
+    line-height:1.05;
+
+    margin-bottom:6px;
 
 }
 
 .subtitle{
 
-    font-size:22px;
+    font-size:clamp(1rem,4vw,1.2rem);
 
-    color:rgba(255,255,255,.75);
+    color:rgba(255,255,255,.8);
 
-    margin-bottom:45px;
+    margin-bottom:36px;
 
 }
 
 
-/* =========================================
-   GRID
-========================================= */
+/* GRID */
 
 #teeGrid{
 
@@ -43,18 +48,12 @@ h1{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:28px;
-
-    max-width:760px;
-
-    margin:50px auto;
+    gap:14px;
 
 }
 
 
-/* =========================================
-   CARD
-========================================= */
+/* TEE CARD */
 
 .teeCard{
 
@@ -70,11 +69,17 @@ h1{
 
 .teeCard label{
 
-    background:#ffffff;
+    width:82%;
 
-    height:250px;
+    aspect-ratio:3 / 4;
 
-    border-radius:30px;
+    justify-self:center;
+
+    background:white;
+
+    border-radius:28px;
+
+    border:2px solid transparent;
 
     display:flex;
 
@@ -86,66 +91,34 @@ h1{
 
     cursor:pointer;
 
-    transition:.25s ease;
-
-    border:2px solid transparent;
-
     position:relative;
 
+    transition:.25s;
+
     box-shadow:
-        0 10px 30px rgba(0,0,0,.12);
+        0 10px 30px rgba(0,0,0,.15);
 
 }
 
 .teeCard label:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
     box-shadow:
-        0 18px 40px rgba(0,0,0,.20);
-
-}
-
-.teeCard input:checked + label .teeSvg{
-
-    transform:scale(1.12);
-
-}
-
-/* =========================================
-   TEE CIRCLE
-========================================= */
-
-.teeCircle{
-
-    width:90px;
-
-    height:90px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    margin-bottom:20px;
+        0 18px 40px rgba(0,0,0,.22);
 
 }
 
 
-/* =========================================
-   TEE SVG
-========================================= */
+/* SVG */
 
 .teeSvg{
 
-    width:56px;
+    width:42px;
 
-    height:112px;
+    height:82px;
 
-    margin-bottom:8px;
+    margin-bottom:12px;
 
 }
 
@@ -155,15 +128,42 @@ h1{
 
 }
 
-/* =========================================
-   KLEUREN
-========================================= */
+
+/* TITEL */
+
+.teeCard span{
+
+    font-size:clamp(1.45rem,4.8vw,1.75rem);
+
+    font-weight:700;
+
+    color:#21422c;
+
+}
+
+
+/* LIJN */
+
+.teeLine{
+
+    width:46px;
+
+    height:5px;
+
+    margin-top:18px;
+
+    border-radius:999px;
+
+}
+
+
+/* KLEUREN */
 
 .wit{
 
-    background:#ffffff;
+    background:white;
 
-    border:3px solid #D8D8D8;
+    border:3px solid #d8d8d8;
 
 }
 
@@ -193,70 +193,22 @@ h1{
 
 .teeSvg.wit{
 
-    color:white;
+    color:#d8d8d8;
 
 }
 
-.teeSvg.geel{
-
-    color:#ffffff;
-
-}
-
-.teeSvg.blauw{
-
-    color:#ffffff;
-
-}
-
-.teeSvg.rood{
-
-    color:#ffffff;
-
-}
-
+.teeSvg.geel,
+.teeSvg.blauw,
+.teeSvg.rood,
 .teeSvg.oranje{
 
-    color:#ffffff;
-
-}
-
-
-
-/* =========================================
-   TITEL
-========================================= */
-
-.teeCard span{
-
-    font-size:34px;
-
-    font-weight:700;
-
-    color:#21422c;
-
-}
-
-
-/* =========================================
-   ONDERLIJN
-========================================= */
-
-.teeLine{
-
-    width:65px;
-
-    height:5px;
-
-    border-radius:999px;
-
-    margin-top:18px;
+    color:white;
 
 }
 
 .teeLine.wit{
 
-    background:#D8D8D8;
+    background:#d8d8d8;
 
 }
 
@@ -285,18 +237,14 @@ h1{
 }
 
 
-/* =========================================
-   SELECTIE
-========================================= */
+/* SELECTIE */
 
 .teeCard input:checked + label{
 
-    transform:translateY(-8px);
-
-    border-width:3px;
+    transform:translateY(-6px);
 
     box-shadow:
-        0 20px 40px rgba(0,0,0,.18);
+        0 20px 40px rgba(0,0,0,.22);
 
 }
 
@@ -306,17 +254,17 @@ h1{
 
     position:absolute;
 
-    top:18px;
+    top:16px;
 
-    right:18px;
+    right:16px;
 
-    width:34px;
+    width:30px;
 
-    height:34px;
+    height:30px;
 
     border-radius:50%;
 
-    background:#1F5F2E;
+    background:#215B35;
 
     color:white;
 
@@ -328,13 +276,13 @@ h1{
 
     font-size:18px;
 
-    font-weight:bold;
+    font-weight:700;
 
 }
 
 #wit:checked + label{
 
-    border-color:#D8D8D8;
+    border-color:#d8d8d8;
 
 }
 
@@ -362,20 +310,43 @@ h1{
 
 }
 
+/*   VIJFDE TEE CENTREREN
+   (verwijderen zodra er een 6e tee komt) */
 
-/* =========================================
-   BUTTON
-========================================= */
+#teeGrid .teeCard:last-child{
+
+    grid-column:1 / -1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+#teeGrid .teeCard:last-child label{
+
+    width:calc(50% - 11px);
+
+}
+
+#teeGrid .teeCard:last-child{
+
+    margin-top:4px;
+
+}
+
+
+/* START BUTTON */
 
 #startButton{
 
-    width:260px;
+    width:88%;
 
-    height:70px;
+    max-width: 260px;
 
-    margin:40px auto 0;
+    height:52px;
 
-    display:block;
+    margin:22px auto 0;
 
     border-radius:999px;
 
@@ -383,7 +354,7 @@ h1{
 
     color:white;
 
-    font-size:24px;
+    font-size:20px;
 
     font-weight:700;
 
@@ -397,19 +368,8 @@ h1{
 
 }
 
-#startButton:not(:disabled){
-
-    background:#215B35;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
 #startButton:not(:disabled):hover{
 
     transform:translateY(-3px);
 
 }
-

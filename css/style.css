@@ -1,9 +1,21 @@
+/* RESET */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html,
+body{
+
+    width:100%;
+
+    overflow-x:hidden;
+
+}
+
+/* BODY */
 
 body{
 
@@ -27,10 +39,35 @@ body{
     background-attachment:fixed;
 
     font-family:
-    Arial,
-    sans-serif;
+        Arial,
+        sans-serif;
 
     color:white;
+
+}
+
+
+/* HOME PAGINA */
+
+.card{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    width:min(90%,700px);
+
+    margin:0 auto;
+
+    padding:20px;
 
 }
 
@@ -55,41 +92,25 @@ body{
 }
 
 
-.card{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    width:min(90%,700px);
-
-    margin:0 auto;
-
-}
+/* TEKST */
 
 h1{
 
     color:white;
 
-    font-size:60px;
+    font-size:clamp(2.8rem,9vw,4rem);
 
     font-weight:700;
 
-    margin-bottom:16px;
-
     text-align:center;
+
+    margin-bottom:16px;
 
 }
 
 h2{
+
+    color:white;
 
     margin-bottom:20px;
 
@@ -97,13 +118,16 @@ h2{
 
 p{
 
-    font-size:22px;
+    font-size:clamp(1.1rem,4vw,1.4rem);
 
     opacity:.85;
 
     margin-bottom:40px;
 
 }
+
+
+/* BUTTONS */
 
 button{
 
@@ -113,23 +137,61 @@ button{
 
     font-weight:700;
 
+    cursor:pointer;
+
     transition:.25s;
 
 }
 
 button:hover{
 
-    transform:scale(1.03);
+    transform:translateY(-3px);
 
 }
 
 button:disabled{
 
-    opacity:.5;
+    opacity:.45;
 
     cursor:not-allowed;
 
 }
+
+
+/* START BUTTON */
+
+#startButton{
+
+    display:block;
+
+    width:260px;
+
+    padding:18px 32px;
+
+    border-radius:999px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18);
+
+}
+
+#startButton:hover{
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.25);
+
+}
+
+
+/* INPUTS */
 
 input{
 
@@ -143,9 +205,10 @@ input{
 
     border-radius:10px;
 
-    margin-bottom:15px;
-
 }
+
+
+/* LIJSTEN */
 
 #playerList,
 #results{
@@ -173,286 +236,20 @@ input{
 
 }
 
-#nextButton,
-#newGameButton{
 
-    width:100%;
-
-    margin-top:40px;
-
-}
-/* ==========================
-   TEE PAGINA
-========================== */
-
-
-.subtitle{
-
-    color:rgba(255,255,255,.75);
-
-    font-size:22px;
-
-    margin-bottom:40px;
-
-}
-
-#teeGrid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:22px;
-
-    margin-bottom:40px;
-
-}
-
-.teeCard{
-
-    position:relative;
-
-}
-
-.teeCard input{
-
-    display:none;
-
-}
-
-.teeCard label{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:18px;
-
-    height:220px;
-
-    background:white;
-
-    border-radius:28px;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-    box-shadow:
-
-        0 10px 25px rgba(0,0,0,.18);
-
-    border:3px solid transparent;
-
-    position:relative;
-
-}
-
-.teeCard label:hover{
-
-    transform:translateY(-4px);
-
-}
-
-.teeCircle{
-
-    width:82px;
-
-    height:82px;
-
-    border-radius:50%;
-
-    border:4px solid rgba(0,0,0,.08);
-
-}
-
-.wit{
-
-    background:white;
-
-}
-
-.geel{
-
-    background:#FFD229;
-
-}
-
-.blauw{
-
-    background:#2D8CEB;
-
-}
-
-.rood{
-
-    background:#F44336;
-
-}
-
-.oranje{
-
-    background:#FF9800;
-
-}
-
-.teeCard span{
-
-    font-size:34px;
-
-    font-weight:700;
-
-    color:#20432c;
-
-}
-
-.teeCard input:checked + label{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-
-        0 18px 40px rgba(0,0,0,.28);
-
-}
-
-.teeCard input:checked + label::after{
-
-    content:"✓";
-
-    position:absolute;
-
-    top:16px;
-
-    right:16px;
-
-    width:34px;
-
-    height:34px;
-
-    border-radius:50%;
-
-    background:#2D8CEB;
-
-    color:white;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-weight:bold;
-
-}
-
-#wit:checked + label{
-
-    border-color:#d8d8d8;
-
-}
-
-#geel:checked + label{
-
-    border-color:#FFD229;
-
-}
-
-#blauw:checked + label{
-
-    border-color:#2D8CEB;
-
-}
-
-#rood:checked + label{
-
-    border-color:#F44336;
-
-}
-
-#oranje:checked + label{
-
-    border-color:#FF9800;
-
-}
-
-#startButton{
-
-    display:block;
-
-    width:260px;
-
-    margin-top:40px;
-
-    border-radius:999px;
-
-    padding:18px 32px;
-
-    border:none;
-
-    background:#215B35;
-
-    color:white;
-
-    font-size:24px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.18);
-
-}
-
-#startButton:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 16px 35px rgba(0,0,0,.25);
-
-}
-
-#startButton:disabled{
-
-    opacity:.45;
-
-    cursor:not-allowed;
-
-}
-
-#startButton:not(:disabled){
-
-    background:#215b35;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-/* =========================================
-   HOME BUTTON
-========================================= */
+/* HOME BUTTON */
 
 .homeButton{
 
     position:fixed;
 
-    top:24px;
+    top:max(20px, env(safe-area-inset-top));
 
-    left:24px;
+    left:20px;
 
-    width:58px;
+    width:56px;
 
-    height:58px;
+    height:56px;
 
     border-radius:18px;
 
@@ -479,8 +276,8 @@ input{
 
 .homeButton:hover{
 
-    transform:translateY(-2px);
-
     background:white;
+
+    transform:translateY(-2px);
 
 }
