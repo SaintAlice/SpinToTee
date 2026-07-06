@@ -1,4 +1,4 @@
-/* RESET */
+/*  RESET*/
 
 *{
     margin:0;
@@ -6,128 +6,108 @@
     box-sizing:border-box;
 }
 
-html,
-body{
-
-    width:100%;
-
-    overflow-x:hidden;
-
+html{
+    font-size:16px;
 }
 
-/* BODY */
+html,
+body{
+    width:100%;
+    min-height:100dvh;
+    overflow-x:hidden;
+}
+
+/*  BODY*/
 
 body{
 
     background-image:
-
         linear-gradient(
             to bottom,
             rgba(18,55,32,.45),
             rgba(18,55,32,.10),
             rgba(18,55,32,.30)
         ),
-
         url("../images/background.png");
 
     background-size:cover;
-
     background-position:center;
-
     background-repeat:no-repeat;
-
     background-attachment:fixed;
 
-    font-family:
-        Arial,
-        sans-serif;
-
+    font-family:Arial,sans-serif;
     color:white;
-
 }
 
+/*  PAGINA LAYOUT*/
 
-/* HOME PAGINA */
+.page{
 
-.card{
+    width:min(100%,700px);
 
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    width:min(90%,700px);
+    height:100dvh;
 
     margin:0 auto;
 
-    padding:20px;
-
-}
-
-.homeContainer{
-
-    min-height:100vh;
+    padding:
+        max(56px, env(safe-area-inset-top))
+        clamp(20px,5vw,32px)
+        calc(env(safe-area-inset-bottom) + 20px);
 
     display:flex;
 
     flex-direction:column;
+
+    overflow:hidden;
+}
+
+.homePage{
 
     justify-content:center;
 
     align-items:center;
 
     text-align:center;
-
-    width:min(90%,900px);
-
-    margin:auto;
-
 }
 
-
-/* TEKST */
+/*  TEKST*/
 
 h1{
 
     color:white;
 
-    font-size:clamp(2.8rem,9vw,4rem);
+    font-size:clamp(2.5rem,8vw,4rem);
 
     font-weight:700;
 
-    text-align:center;
-
-    margin-bottom:16px;
-
+    margin-bottom:clamp(12px,3vw,20px);
 }
 
 h2{
 
     color:white;
 
-    margin-bottom:20px;
+    font-size:clamp(1.4rem,5vw,2rem);
 
+    margin-bottom:clamp(16px,4vw,24px);
 }
 
 p{
+    line-height:1.4;
+}
 
-    font-size:clamp(1.1rem,4vw,1.4rem);
+.subtitle{
+
+    font-size:clamp(1rem,4vw,1.35rem);
 
     opacity:.85;
 
-    margin-bottom:40px;
+    margin-bottom:clamp(24px,6vw,40px);
 
+    text-align:center;
 }
 
-
-/* BUTTONS */
+/*  BUTTONS*/
 
 button{
 
@@ -140,13 +120,11 @@ button{
     cursor:pointer;
 
     transition:.25s;
-
 }
 
 button:hover{
 
     transform:translateY(-3px);
-
 }
 
 button:disabled{
@@ -154,88 +132,22 @@ button:disabled{
     opacity:.45;
 
     cursor:not-allowed;
-
 }
 
-
-/* START BUTTON */
-
-#startButton{
-
-    display:block;
-
-    width:260px;
-
-    padding:18px 32px;
-
-    border-radius:999px;
-
-    background:#215B35;
-
-    color:white;
-
-    font-size:24px;
-
-    font-weight:700;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.18);
-
-}
-
-#startButton:hover{
-
-    box-shadow:
-        0 16px 35px rgba(0,0,0,.25);
-
-}
-
-
-/* INPUTS */
+/*  INPUTS*/
 
 input{
 
     width:100%;
 
-    padding:15px;
+    padding:16px;
 
-    font-size:20px;
+    font-size:clamp(1rem,4vw,1.2rem);
 
     border:none;
 
-    border-radius:10px;
-
+    border-radius:12px;
 }
-
-
-/* LIJSTEN */
-
-#playerList,
-#results{
-
-    margin-top:30px;
-
-}
-
-.player,
-.result{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    background:rgba(255,255,255,.15);
-
-    padding:15px;
-
-    border-radius:10px;
-
-    margin-bottom:10px;
-
-}
-
 
 /* HOME BUTTON */
 
@@ -243,13 +155,13 @@ input{
 
     position:fixed;
 
-    top:max(20px, env(safe-area-inset-top));
+    top:max(16px, env(safe-area-inset-top));
 
-    left:20px;
+    left:clamp(16px,4vw,24px);
 
-    width:56px;
+    width:clamp(48px,12vw,58px);
 
-    height:56px;
+    height:clamp(48px,12vw,58px);
 
     border-radius:18px;
 
@@ -263,15 +175,13 @@ input{
 
     text-decoration:none;
 
-    font-size:28px;
+    font-size:clamp(22px,6vw,30px);
 
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.18);
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
 
     transition:.25s;
 
     z-index:999;
-
 }
 
 .homeButton:hover{
@@ -279,5 +189,4 @@ input{
     background:white;
 
     transform:translateY(-2px);
-
 }

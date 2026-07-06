@@ -16,48 +16,56 @@
 
 <body>
 
-<div class="page">
+<a href="index.html" class="homeButton">
+    🏠
+</a>
 
-    <h1>Spelers</h1>
+<main class="page playersPage">
 
-    <p class="subtitle">
-        Wie doen er vandaag mee?
-    </p>
+    <header class="pageHeader">
 
-    <div class="addPlayer">
+        <h1>Spelers</h1>
 
-      <input
-        type="text"
-        id="playerInput"
-        placeholder="Naam speler">
+        <p class="subtitle">
+            Wie doen er vandaag mee?
+        </p>
 
-        <button id="addPlayerButton">
+    </header>
 
-            +
+    <section class="pageContent">
+
+        <div class="addPlayer">
+
+            <input
+                type="text"
+                id="playerInput"
+                placeholder="Naam speler">
+
+            <button id="addPlayerButton">
+                +
+            </button>
+
+        </div>
+
+        <div id="playerList"></div>
+
+    </section>
+
+    <footer class="pageFooter">
+
+        <button
+            id="nextButton"
+            disabled>
+
+            Volgende →
 
         </button>
 
-    </div>
+    </footer>
 
-    <div id="playerList"></div>
-
-    <button
-        id="nextButton"
-        disabled>
-
-        Volgende →
-
-    </button>
-
-</div>
+</main>
 
 <script src="js/spelers.js"></script>
 
 </body>
-
-<a href="index.html" class="homeButton">
-
-    🏠
-
-</a>
 </html>

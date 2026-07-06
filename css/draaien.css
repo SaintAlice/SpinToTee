@@ -1,10 +1,8 @@
-/* ==========================================
-   PAGINA LAYOUT
-========================================== */
+/* PAGINA LAYOUT*/
 
 body{
 
-    min-height:100vh;
+    min-height:100dvh;
 
     display:flex;
 
@@ -14,12 +12,16 @@ body{
 
 .topBar{
 
+    display:flex;
+    align-items:center;
+
+    min-height:72px;
+
+    padding-top:max(16px, env(safe-area-inset-top));
+    padding-left:16px;
+    padding-right:16px;
+
     position:relative;
-
-    height:60px;
-
-    padding-top:max(20px, env(safe-area-inset-top));
-
 }
 
 .homeButton{
@@ -36,30 +38,26 @@ body{
 
     flex:1;
 
-    display:flex;
+    min-height:0;
 
+    display:flex;
     flex-direction:column;
 
     justify-content:center;
-
     align-items:center;
 
-    padding:0 16px;
-
+    padding:16px;
 }
 
 footer{
 
-    padding-top:20px;
+    padding:20px 16px calc(env(safe-area-inset-bottom) + 24px);
 
-    padding-bottom:calc(env(safe-area-inset-bottom) + 30px);
-
+    display:flex;
+    justify-content:center;
 }
 
-
-/* ==========================================
-   HUIDIGE SPELER
-========================================== */
+/* HUIDIGE SPELER*/
 
 #currentPlayer{
 
@@ -76,9 +74,7 @@ footer{
 }
 
 
-/* ==========================================
-   STATUS
-========================================== */
+/* STATUS*/
 
 #statusText{
 
@@ -97,9 +93,7 @@ footer{
 }
 
 
-/* ==========================================
-   SPELERSBALK
-========================================== */
+/* SPELERSBALK*/
 
 #playersBar{
 
@@ -107,10 +101,11 @@ footer{
 
     justify-content:center;
 
-    gap:20px;
-
     flex-wrap:wrap;
 
+    gap:clamp(8px,2vw,16px);
+
+    width:100%;
 }
 
 .playerCard{
@@ -121,7 +116,7 @@ footer{
 
     align-items:center;
 
-    width:72px;
+    width:clamp(56px,16vw,72px);
 
 }
 
@@ -175,9 +170,7 @@ footer{
 }
 
 
-/* ==========================================
-   TEEKLEUREN
-========================================== */
+/* TEEKLEUREN */
 
 .photo-wit{
 

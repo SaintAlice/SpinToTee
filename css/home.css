@@ -1,0 +1,25 @@
+/*  START BUTTON*/
+
+#startButton{
+
+    width:min(100%,320px);
+
+    padding:18px;
+
+    border-radius:999px;
+
+    background:#215B35;
+
+    color:white;
+
+    font-size:clamp(1.2rem,5vw,1.5rem);
+
+    font-weight:700;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+#startButton:hover{
+
+    box-shadow:0 16px 35px rgba(0,0,0,.25);
+}
