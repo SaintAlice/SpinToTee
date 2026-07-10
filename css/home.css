@@ -2,9 +2,11 @@
 
 #startButton{
 
-    width:min(100%,320px);
+    width:280px;
 
-    padding:18px;
+    height:70px;
+
+    border:none;
 
     border-radius:999px;
 
@@ -12,14 +14,21 @@
 
     color:white;
 
-    font-size:clamp(1.2rem,5vw,1.5rem);
+    font-size:28px;
 
     font-weight:700;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.18);
+
 }
 
 #startButton:hover{
 
-    box-shadow:0 16px 35px rgba(0,0,0,.25);
+    transform:translateY(-3px);
+
 }
