@@ -122,9 +122,9 @@ footer{
 
 .playerPhoto{
 
-    width:64px;
+    width:clamp(52px,15vw,64px);
 
-    height:64px;
+    height:clamp(52px,15vw,64px);
 
     border-radius:50%;
 
@@ -140,7 +140,7 @@ footer{
 
     color:#215B35;
 
-    font-size:24px;
+    font-size:clamp(18px,5vw,24px);
 
     font-weight:700;
 
@@ -159,14 +159,15 @@ footer{
 
 .playerName{
 
-    margin-top:8px;
+    margin-top:6px;
 
-    color:white;
+    width:100%;
 
-    font-size:13px;
+    font-size:clamp(.7rem,2.5vw,.85rem);
 
-    text-align:center;
-
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 
 

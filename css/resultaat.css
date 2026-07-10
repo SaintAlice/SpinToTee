@@ -1,29 +1,23 @@
-.page{
+.playersPage{
 
-    width:min(100%,700px);
-
-    margin:0 auto;
-
-    padding:
-        max(24px, env(safe-area-inset-top))
-        clamp(16px,4vw,32px)
-        calc(env(safe-area-inset-bottom) + 24px);
-
-    min-height:100dvh;
+    flex:1;
 
     display:flex;
+
     flex-direction:column;
 }
 
-h1{
+.pageHeader{
+
+    flex-shrink:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
 
     text-align:center;
-
-    color:white;
-
-    font-size:clamp(2.2rem,8vw,4rem);
-
-    margin-bottom:12px;
 }
 
 .subtitle{
@@ -54,74 +48,13 @@ h1{
     padding-right:4px;
 }
 
-.resultCard{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:12px;
-
-    background:rgba(255,255,255,.95);
-
-    border-radius:clamp(18px,5vw,26px);
-
-    padding:clamp(16px,4vw,24px);
-
-    box-shadow:
-        0 16px 40px rgba(0,0,0,.10);
-}
-
-.resultLeft{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:clamp(12px,3vw,18px);
-
-    min-width:0;
-}
-
-.resultAvatar{
-
-    width:clamp(48px,14vw,64px);
-
-    height:clamp(48px,14vw,64px);
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:white;
-
-    font-size:clamp(1.1rem,4vw,1.6rem);
-
-    font-weight:700;
-
-    flex-shrink:0;
-}
-
-.resultName{
-
-    font-size:clamp(1.1rem,5vw,1.9rem);
-
-    font-weight:600;
-
-    color:#21422c;
-
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-}
-
 .resultBadge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
 
     padding:clamp(8px,2vw,10px)
             clamp(12px,3vw,18px);
@@ -135,6 +68,36 @@ h1{
     font-weight:700;
 
     flex-shrink:0;
+}
+
+.resultBadge.blauw{
+
+    color:#0057B8;
+
+}
+
+.resultBadge.rood{
+
+    color:#C62828;
+
+}
+
+.resultBadge.oranje{
+
+    color:#E67E00;
+
+}
+
+.resultBadge.geel{
+
+    color:#A36B00;
+
+}
+
+.resultBadge.wit{
+
+    color:#666;
+
 }
 
 #newGameButton{

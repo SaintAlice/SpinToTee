@@ -11,54 +11,60 @@ showResults();
 
 newGameButton.addEventListener("click", newGame);
 
-function showResults(){
+function showResults() {
 
-    resultsContainer.innerHTML = "";
+    let html = "";
 
-    results.forEach(function(result){
+    results.forEach(function(result) {
 
         const initial =
-        result.player
-            .charAt(0)
-            .toUpperCase();
+            result.player.charAt(0).toUpperCase();
+
+        const playerName =
+            result.player.charAt(0).toUpperCase() +
+            result.player.slice(1);
 
         const teeClass =
-        result.tee.toLowerCase();
+            result.tee.toLowerCase();
 
-        resultsContainer.innerHTML += `
+        html += `
 
-        <div class="resultCard">
+            <div class="player">
 
-            <div class="resultLeft">
+                <div class="playerInfo">
 
-                <div class="resultAvatar ${teeClass}">
+                    <div class="playerAvatar ${teeClass}">
+                        ${initial}
+                    </div>
 
-                    ${initial}
+                    <div class="playerName">
+                        ${playerName}
+                    </div>
 
                 </div>
 
-                <div class="resultName">
+                <div class="resultBadge ${teeClass}">
 
-                    ${result.player}
+                    <span class="teeEmoji">
+                        ${getTeeEmoji(result.tee)}
+                    </span>
+
+                    <span class="teeName">
+                        ${result.tee}
+                    </span>
 
                 </div>
 
             </div>
-
-            <div class="resultBadge ${teeClass}">
-
-                ${getTeeEmoji(result.tee)}
-                ${result.tee}
-
-            </div>
-
-        </div>
 
         `;
 
     });
 
+    resultsContainer.innerHTML = html;
+
 }
+
 
 function getTeeEmoji(tee){
 
